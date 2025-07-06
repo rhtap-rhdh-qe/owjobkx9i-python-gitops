@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: owjobkx9i-python-gitops
+  description: This is GitOps manifest for owjobkx9i-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=owjobkx9i-python
+    backstage.io/kubernetes-id: owjobkx9i-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: owjobkx9i-python
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:owjobkx9i-python
